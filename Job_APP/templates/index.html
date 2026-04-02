@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic AI Job Application Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <p class="eyebrow">Academic Mini Project</p>
+            <h1>Agentic AI Job Application Assistant</h1>
+            <p class="hero-text">
+                Paste a resume and a job description, then let the AI agent analyze gaps,
+                weak areas, and improvement opportunities.
+            </p>
+        </header>
+
+        <main class="app-grid">
+            <section class="panel input-panel">
+                <label for="resume">Resume</label>
+                <textarea id="resume" placeholder="Paste the resume here..."></textarea>
+
+                <label for="jobDescription">Job Description</label>
+                <textarea id="jobDescription" placeholder="Paste the job description here..."></textarea>
+
+                <button id="analyzeBtn">Analyze Resume</button>
+                <p id="statusMessage" class="status-message"></p>
+            </section>
+
+            <section class="panel output-panel">
+                <h2>Analysis Result</h2>
+
+                <div class="result-card">
+                    <h3>Missing Skills</h3>
+                    <ul id="missingSkillsList">
+                        <li class="placeholder">Results will appear here.</li>
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h3>Weak Areas</h3>
+                    <ul id="weakAreasList">
+                        <li class="placeholder">Results will appear here.</li>
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h3>Suggestions</h3>
+                    <ul id="suggestionsList">
+                        <li class="placeholder">Results will appear here.</li>
+                    </ul>
+                </div>
+
+                <div class="result-card">
+                    <h3>Raw Agent Response</h3>
+                    <pre id="rawResponse">The full structured agent response will appear here.</pre>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
